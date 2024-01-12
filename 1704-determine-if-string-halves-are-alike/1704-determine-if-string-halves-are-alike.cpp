@@ -1,22 +1,22 @@
 class Solution {
 public:
-    
     bool halvesAreAlike(string s) {
-        int x=s.length()/2;
-        int c1=0,c2=0;
-        for(int i=0;i<x;i++)
+        int l=s.length()/2;
+        int c=0,r=0;
+        for(int i=0;i<l;i++)
         {
-            if(s[i]=='A'||s[i]=='E'||s[i]=='O'||s[i]=='U'||s[i]=='I'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='u'||s[i]=='o')
-                c1++;
+              if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U' )
+                c++;
         }
-        for(int i=x;i<s.length();i++)
+        for(int i=l;i<s.length();i++)
         {
-            if(s[i]=='A'||s[i]=='E'||s[i]=='O'||s[i]=='U'||s[i]=='I'||s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='u'||s[i]=='o')
-                c2++;
+             if(s[i]=='a'||s[i]=='e'||s[i]=='i'||s[i]=='o'||s[i]=='u'||s[i]=='A'||s[i]=='E'||s[i]=='I'||s[i]=='O'||s[i]=='U' )
+                r++;
         }
-        if(c1!=c2)
-            return false;
         
-        return true;
+        if(c==r)
+            return true;
+        else
+            return false;
     }
 };
