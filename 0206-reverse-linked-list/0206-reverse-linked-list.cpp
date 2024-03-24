@@ -11,9 +11,9 @@
 class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
-        ListNode* curr=head;
-        ListNode* prev=NULL;
-        ListNode* fwd=NULL;
+       ListNode* curr=head;
+       ListNode* prev=NULL;
+       ListNode* fwd=NULL;
         
         while(curr!=NULL)
         {
@@ -22,8 +22,7 @@ public:
             prev=curr;
             curr=fwd;
         }
-            return prev;
-            
-            
+        
+        return prev;
     }
 };
